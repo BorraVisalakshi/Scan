@@ -73,7 +73,7 @@
         </configuration>
     </plugin> -->
 	
-	<!-- Weblogic deploy-->
+	<!-- Weblogic deploy
 	<plugin> 
     <groupId>com.oracle.weblogic</groupId> 
         <artifactId>weblogic-maven-plugin</artifactId> 
@@ -97,7 +97,7 @@
                 </goals> 
             </execution> 
         </executions> 
-    </plugin> 
+    </plugin> -->
 
 			</plugins>
 		</build>
