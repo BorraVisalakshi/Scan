@@ -19,5 +19,11 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
       
-    - name: Check Vulnerabilities
-      run: java -javaagent:/home/runner/work/Scan/Scan/contrast.jar -jar /home/runner/work/Scan/Scan/target/SubmissionDataForm-0.0.1-SNAPSHOT.war
+   # - name: Check Vulnerabilities
+   #   run: java -javaagent:/home/runner/work/Scan/Scan/contrast.jar -jar /home/runner/work/Scan/Scan/target/SubmissionDataForm-0.0.1-SNAPSHOT.war
+   
+    - name: Send email
+      uses: mmichailidis/sendgrid-mail-action@v1.0
+      with:
+        sendgrid-token: 'sample'
+        mail: 'vishaliborra@gmail.com'
