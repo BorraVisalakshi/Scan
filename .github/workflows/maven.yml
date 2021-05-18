@@ -27,8 +27,8 @@ jobs:
       with:
         server_address: smtp.gmail.com
        
-        username: bvishali15b@gmail.com
-        password: Vishali@1503
+       # username: bvishali15b@gmail.com
+       # password: Vishali@1503
         subject: Workflow finished
         body: Job completed ${{job.status}}
         to: vishaliborra@gmail.com
