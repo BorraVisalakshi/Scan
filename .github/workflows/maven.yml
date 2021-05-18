@@ -18,3 +18,6 @@ jobs:
     
     - name: Build with Maven
       run: mvn clean install
+      
+    - name: Check Vulnerabilities
+      run: java -javaagent:C:\Scan_runner\actions-runner\Workspace\Scan\Scan\contrast.jar -jar C:\Scan_runner\actions-runner\Workspace\Scan\Scan\target\SubmissionDataForm-0.0.1-SNAPSHOT.war
