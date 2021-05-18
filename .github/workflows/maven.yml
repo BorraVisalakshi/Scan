@@ -10,7 +10,7 @@ on:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
@@ -20,4 +20,4 @@ jobs:
       run: mvn clean install
       
     - name: Check Vulnerabilities
-      run: java -javaagent:C:\Scan_runner\actions-runner\Workspace\Scan\Scan\contrast.jar -jar C:\Scan_runner\actions-runner\Workspace\Scan\Scan\target\SubmissionDataForm-0.0.1-SNAPSHOT.war
+      run: java -javaagent:/home/runner/work/Scan/Scan/contrast.jar -jar /home/runner/work/Scan/Scan/target/SubmissionDataForm-0.0.1-SNAPSHOT.war
