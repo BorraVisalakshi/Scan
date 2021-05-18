@@ -22,8 +22,14 @@ jobs:
    # - name: Check Vulnerabilities
    #   run: java -javaagent:/home/runner/work/Scan/Scan/contrast.jar -jar /home/runner/work/Scan/Scan/target/SubmissionDataForm-0.0.1-SNAPSHOT.war
    
-    - name: Send email
-      uses: mmichailidis/sendgrid-mail-action@v1.0
+    - name: Send some mail
+      uses: wadeww/send-email-action@master
       with:
-        sendgrid-token: 'sample'
-        mail: 'vishaliborra@gmail.com'
+        server_address: smtp.gmail.com
+       
+        username: vishaliborra@gmail.com
+        password: Vishali@1503
+        subject: Workflow finished
+        body: Job completed ${{job.status}}
+        to: vishaliborra@gmail.com
+        from: me
